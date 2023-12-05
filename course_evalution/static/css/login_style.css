@@ -1,0 +1,148 @@
+body{ 
+    margin: 0; padding: 0; 
+}
+.container{
+    display: flex;
+    height:708px;
+}
+#logo {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.left-content{
+    flex: 1;
+   
+}
+.right-content{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    font-family: Microsoft JhengHei;;
+    line-height: 25px;
+}
+#red{
+    color:red;
+    font-weight: bold;
+}
+#blue{
+    color:rgb(25,118,210);
+    font-weight: bold;
+}
+
+.form-container{
+    width: 90%;
+    max-width: 400px;
+    min-width: 100px;
+    overflow: visible;
+}
+.form-container .input {
+    border: none;
+    padding: 10px 0 15px;
+    outline: none;
+    font-size: 18px;
+    margin: 6px 0 0 18px;
+    width: 100%;
+}
+.icon{
+    width: 20px;
+    height: 20px;
+    opacity: .3;
+}
+.form-container .textinput {
+    margin-top: 10px;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,.3);
+    margin-bottom: 20px;
+    position: relative;
+}
+.label{
+    font-size: 18px;
+}
+.form-container .label {
+    font-size: 18px;
+    font-weight: 500;
+    position: absolute;
+    left: 40px;
+    top: 15px;
+    transition: .3s cubic-bezier(0,0,.3,1);
+    pointer-events: none;
+    color: #828482;
+    user-select: none;
+}
+.form-container .login {
+    cursor: pointer;
+    background: #323232;
+    width: 100%;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    outline: 0;
+    border: 0;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+.form-container .function {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+.activate{
+    color:rgb(25,118,210);
+    font-size: 20px;
+    font-weight: 700;
+    outline: none;
+    background-color: white;
+   
+}
+.activate:hover{
+    color:brown;
+}
+.forget{
+    color: rgba(0,0,0,.6);
+    outline: none;
+    background-color: white;
+   
+}
+.forget:hover{
+    color:red;
+}
+.textinput label{
+    pointer-events: none;
+    transition: all 0.5s;
+}
+.textinput input:focus + label,
+.textinput input:valid + label{
+	font-size: 18px;
+	top: -15px;
+	color:red;
+}
+#Login{
+    display: block;
+}
+
+#Register{
+    display: none;
+}
+#text{
+   
+    font-size: 18px;
+
+}
+#Forgot{
+    display: none;
+}

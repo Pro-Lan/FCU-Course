@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{title}}</title>
+        {% load static %}
+        <link href="{% static 'css/login_style.css'%}" rel="stylesheet" />
+       
+    </head>
+    <body>
+        <div class="container">
+            {% comment %} 圖標 {% endcomment %}
+            <div class="left-content">
+                <img src="{% static 'images/logo1.png' %}" alt="python/django" / id = "logo">
+            </div>
+            
+            <div class="right-content">
+                {% comment %} 登入頁面 {% endcomment %}
+                <form class = "form-container" id = "Login" >
+                <p>
+                    學生請使用「<span id = "red">學號</span>」進行登入</span><br>
+
+                    第一次登入時，請先執行「<span id = "blue">註冊</span>」功能。 <br>
+                    When using FCU Course for the first time, please execute "<span id = "blue">Register</span>" function.
+                </p>
+                <div class = "textinput">
+                    <img class = "icon" src = "{% static 'images/user.png' %}">
+                    <input id = "account" name = "account" class = "input"  required="required">
+                    <label class = "label">學號 (Student ID)</label>
+                </div>
+                <div class = "textinput">
+                    <img class = "icon" src = "{% static 'images/password.png' %}">
+                    <input id = "account" name = "account" class = "input"  required="required">
+                    <label class = "label">密碼 (Password)</label>
+                </div>
+                <input type = "submit" value = "登入 (Login)" class = "login">
+                <div class = "function">
+    
+                       <div onclick = show_hide("Register") class = "activate"> 註冊 (Register) </div>
+                        
+                </div>
+                <div class = "function">
+                    <br>
+                    <div onclick = show_hide("Forgot") class = "forget">忘記密碼 (Forgot Password)</div>
+                </div>
+            </form>
+
+                {% comment %} 註冊頁面 {% endcomment %}
+                <form class = "form-container" id = "Register" >
+                  
+                    <div class = "textinput">
+                        <img class = "icon" src = "{% static 'images/user.png' %}">
+                        <input id = "account" name = "account" class = "input"  required="required">
+                        <label class = "label">學號 (Student ID)</label>
+                    </div>
+                    <div class = "textinput">
+                        <img class = "icon" src = "{% static 'images/password.png' %}">
+                        <input id = "account" name = "account" class = "input"  required="required">
+                        <label class = "label">密碼 (Password)</label>
+                    </div>
+                    <div class = "textinput">
+                        <img class = "icon" src = "{% static 'images/password.png' %}">
+                        <input id = "account" name = "account" class = "input"  required="required">
+                        <label class = "label">密碼確認 (Password Confirm)</label>
+                    </div>
+                    <div class = "textinput">
+                        <img class = "icon" src = "{% static 'images/mail.png' %}">
+                        <input id = "account" name = "account" class = "input"  required="required">
+                        <label class = "label">電子郵箱 (Email)</label>
+                    </div>
+                    <input type = "submit" value = "註冊 (Register)" class = "login">
+                    <div class = "function">
+                        <div onclick = show_hide("Login") class = "activate"> 登入 (Login) </div>
+                 </div>
+                 <div class = "function">
+                    <br>
+                    <div onclick = show_hide("Forgot") class = "forget">忘記密碼 (Forgot Password)</div>
+                </div>
+                   
+            </form>
+
+            {% comment %} 忘記密碼 {% endcomment %}
+            <form class = "form-container" id = "Forgot" >
+                  
+                <div class = "textinput">
+                    <img class = "icon" src = "{% static 'images/user.png' %}">
+                    <input id = "account" name = "account" class = "input"  required="required">
+                    <label class = "label">學號 (Student ID)</label>
+                </div>
+               
+               
+                <input type = "submit" value = "寄送郵件 (Send Mail)" class = "login">
+               
+             <div class = "function">
+                <br>
+                <div onclick = show_hide("Login") class = "activate"> 登入 (Login) </div>
+                 
+         </div>
+        </form>
+            </div>
+        </div>
+       <script src = "{% static "js/login.js" %}" ></script>
+    </body>
+</html>
